@@ -1,0 +1,47 @@
+---
+const contactInfo = {
+  owner: "Girdhari Lal Saini",
+  phones: ["+91 90672 78158", "+91 97275 59971"],
+  whatsapp: "+91 90672 78158"
+};
+---
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div>
+        <h3>Owner</h3>
+        <p>{contactInfo.owner}</p>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        {contactInfo.phones.map(phone => (
+          <p><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></p>
+        ))}
+      </div>
+      <div>
+        <h3>WhatsApp</h3>
+        <p>
+          <a href={`https://wa.me/${contactInfo.whatsapp.replace(/\s/g, '')}`}>
+            {contactInfo.whatsapp}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+</style>

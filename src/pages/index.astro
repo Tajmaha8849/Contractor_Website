@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Shree Shyam Painting Services | Professional Painting Contractor in Dadra Nagar Haveli">
+  <main>
+    <Hero 
+      title="Shree Shyam Painting Services"
+      tagline="Professional Painting Services with 20 Years of Excellence"
+    />
+    
+    <Services />
+
+    <section class="brands">
+      <div class="container">
+        <h2>Trusted Paint Brands</h2>
+        <div class="brand-list">
+          <span>Asian Paints</span>
+          <span>Dulux</span>
+          <span>Burger Paints</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <div class="container">
+        <h2>20 Years of Experience</h2>
+        <p>Serving clients across:</p>
+        <ul class="locations">
+          <li>Dadra Nagar Haveli</li>
+          <li>Daman</li>
+          <li>Valsad</li>
+          <li>Vapi</li>
+        </ul>
+      </div>
+    </section>
+
+    <Projects />
+
+    <Contact />
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --light-bg: #f3f4f6;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  section:nth-child(even) {
+    background-color: var(--light-bg);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .brand-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .locations {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+</style>

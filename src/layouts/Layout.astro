@@ -1,0 +1,80 @@
+---
+import Navbar from '../components/Navbar.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Professional painting services in Dadra Nagar Haveli, Daman, Valsad, and Vapi. 20 years of experience in interior and exterior painting, texture work, polishing, and POP. Contact Girdhari Lal Saini for quality painting services." />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="painting contractor, painting services, Dadra Nagar Haveli, Daman, Valsad, Vapi, interior painting, exterior painting, texture work, polishing, POP work, Asian Paints, Dulux, Burger Paints" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Professional painting services with 20 years of experience. Serving Dadra Nagar Haveli, Daman, Valsad, and Vapi." />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #1f2937;
+    --light-bg: #f3f4f6;
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .btn.secondary {
+    background-color: white;
+    color: var(--primary-color);
+  }
+</style>

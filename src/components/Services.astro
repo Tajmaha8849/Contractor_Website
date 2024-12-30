@@ -1,0 +1,53 @@
+---
+const services = [
+  {
+    title: "Interior Painting",
+    description: "Transform your indoor spaces with our expert interior painting services"
+  },
+  {
+    title: "Exterior Painting",
+    description: "Protect and beautify your building's exterior with durable paint solutions"
+  },
+  {
+    title: "Texture Work",
+    description: "Custom texture finishes to add character to your walls"
+  },
+  {
+    title: "Polishing",
+    description: "Professional wood polishing services for a perfect finish"
+  },
+  {
+    title: "POP Work",
+    description: "Plaster of Paris work for ceiling and wall designs"
+  }
+];
+---
+
+<section class="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      {services.map(service => (
+        <div class="service-card">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+</style>

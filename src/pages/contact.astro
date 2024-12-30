@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout title="Contact Us | Shree Shyam Painting Services">
+  <main class="contact-page">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <div class="content">
+        <div class="contact-info-extended">
+          <h2>Service Areas</h2>
+          <ul class="areas-list">
+            <li>Dadra Nagar Haveli</li>
+            <li>Daman</li>
+            <li>Valsad</li>
+            <li>Vapi</li>
+          </ul>
+          
+          <h2>Business Hours</h2>
+          <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+          <p>Sunday: By Appointment</p>
+        </div>
+        
+        <Contact />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .contact-page {
+    padding: 4rem 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+  }
+
+  .content {
+    display: grid;
+    gap: 3rem;
+  }
+
+  .contact-info-extended {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  h2:first-child {
+    margin-top: 0;
+  }
+
+  .areas-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .areas-list li {
+    padding: 0.5rem;
+    background: var(--light-bg);
+    border-radius: 0.25rem;
+    text-align: center;
+  }
+</style>

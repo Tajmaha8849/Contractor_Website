@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  tagline: string;
+}
+
+const { title, tagline } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>{title}</h1>
+    <p class="tagline">{tagline}</p>
+    <div class="cta-buttons">
+      <a href="tel:+919067278158" class="btn primary">Call Now: 90672 78158</a>
+      <a href="https://wa.me/919067278158" class="btn secondary">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+    }
+  }
+</style>
